@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task 19</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/github icon.svg" type="image/svg" />
+  </head>
+  <body>
+    <div class="top">
+      <h1>LESSON 19 JS</h1>
+    </div>
+    <section class="form-section">
+      <form class="form" id="sign-up" action="/save-user" method="" novalidate>
+        <div class="input-field">
+          <label for="username">Enter User Name</label>
+          <input type="text" id="username" placeholder="user name" required />
+          <span class="error-message" id="username-error"></span>
+        </div>
+
+        <div class="input-field">
+          <label for="email">Enter Email</label>
+          <input type="email" id="email" placeholder="email" required />
+          <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="input-field">
+          <label for="password">Enter Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="password"
+            minlength="4"
+          />
+          <span class="error-message" id="password-error"></span>
+        </div>
+        <!--  -->
+        <div class="input-field">
+          <label for="personal_number">Personal Number</label>
+          <input
+            type="number"
+            id="personal_number"
+            placeholder="Personal Number"
+            minlength="4"
+          />
+          <span class="error-message" id="personal_number-error"></span>
+        </div>
+
+        <div class="input-field">
+          <label for="mobile_number">Mobile Number</label>
+          <input
+            type="number"
+            id="mobile_number"
+            placeholder="Mobile Number"
+            minlength="4"
+          />
+          <span class="error-message" id="mobile_number-error"></span>
+        </div>
+
+        <div class="input-field">
+          <label for="position">Position</label>
+          <input
+            type="text"
+            id="position"
+            placeholder="Position"
+            minlength="4"
+          />
+          <span class="error-message" id="position-error"></span>
+        </div>
+        <!--      -->
+        <div class="input-field">
+          <button class="btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="modal-section">
+      <div class="modal" id="sign-up-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Modal Title</h3>
+            <button class="btn delete modal-close">X</button>
+          </div>
+          <div class="modal-body">this is modal body</div>
+        </div>
+      </div>
+    </section>
+    <div class="modal" id="sign-in-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Modal two</h3>
+          <button class="btn delete modal-close">X</button>
+        </div>
+        <div class="modal-body">this is sign-in-modal modal body</div>
+      </div>
+    </div>
+
+    <button class="open-modal-second btn">open second modal</button>
+    <script src="app.js"></script>
+  </body>
+</html>
