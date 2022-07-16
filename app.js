@@ -61,6 +61,36 @@ function validatePassword() {
   }
 }
 
+function validatepersonalNumber() {
+  // როცა personalNumber 11 სიმბოლოზე ნაკლებია, მაშინ გამოვა ერორი
+  if (personalNumber.value.length <= 11) {
+    personalNumber.classList.add("error");
+    personalNumberError.textContent = "personalNumber must be 11 charachter";
+    // console.log(userName.validity.tooShort);
+    return false;
+  } else {
+    personalNumberError.textContent = "";
+    personalNumber.classList.remove("error");
+    // password.type = "text";
+    return true;
+  }
+}
+
+function validateMobileNumber() {
+  // როცა mobileNumber 9 სიმბოლოზე ნაკლებია, მაშინ გამოვა ერორი
+  if (mobileNumber.value.length <= 11) {
+    mobileNumber.classList.add("error");
+    mobileNumberError.textContent = "mobileNumber must be 9 charachter";
+    // console.log(userName.validity.tooShort);
+    return false;
+  } else {
+    mobileNumberError.textContent = "";
+    mobileNumber.classList.remove("error");
+    // password.type = "text";
+    return true;
+  }
+}
+
 userName.addEventListener("input", (e) => {
   // console.log(e.target.value);
   validateUserName();
@@ -77,6 +107,8 @@ userSignUpForm.addEventListener("submit", (e) => {
   const isValidUserName = validateUserName();
   const isValidEmail = validateEmail();
   const isValidPassword = validatePassword();
+  const isValidPersonalNumber = validatepersonalNumber();
+  const isValidMobileNumber = validateMobileNumber();
 
   // console.log(isValidUserName, isValidEmail, isValidPassword);
 
