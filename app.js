@@ -114,14 +114,23 @@ userSignUpForm.addEventListener("submit", (e) => {
 
   // showModal();
 
-  if (isValidUserName && isValidEmail && isValidPassword) {
-    // თუ სამივე ინფუთი ვალიდურია ფორმა დასაბმითდეს / ან შევინახოთ ინფორმაცია და ბექის მხარეს გავაგზავნოთ
+  if (
+    isValidUserName &&
+    isValidEmail &&
+    isValidPassword &&
+    isValidPersonalNumber &&
+    isValidMobileNumber
+  ) {
+    // თუ ხუთივე ინფუთი ვალიდურია ფორმა დასაბმითდეს / ან შევინახოთ ინფორმაცია და ბექის მხარეს გავაგზავნოთ
     // userSignUpForm.submit()
 
     const userInfo = {
       userName: userName.value,
       email: email.value,
       password: password.value,
+      PersonalNumber: PersonalNumber.value,
+      MobileNumber: MobileNumber,
+      value,
     };
 
     console.log(userInfo);
